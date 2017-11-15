@@ -1,0 +1,22 @@
+<mat-card class="mat-whiteframe-2dp">
+  <mat-card-title>
+    <span>{{ note.title }}</span>
+  </mat-card-title>
+  <mat-card-content>
+    <mat-card-subtitle>{{ note.content}}</mat-card-subtitle>
+    <div class="created-info">
+      Created At:
+      <span>{{ note.createdAt }}</span>
+    </div>
+    <div class="updated-info">
+      Updated At:
+      <span>{{ note.updatedAt }}</span>
+    </div>
+    <a mat-button title="Edit" href="javascript:void(0);">
+      <mat-icon svgIcon="icon-edit">Edit</mat-icon>
+    </a>
+    <button mat-button title="Delete" (click)="delete(note)">
+      <mat-icon svgIcon="icon-delete">Delete</mat-icon>
+    </button>
+  </mat-card-content>
+</mat-card>
